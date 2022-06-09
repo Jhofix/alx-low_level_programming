@@ -13,9 +13,9 @@ int main(void)
 	char n;
 
 	for (n = 'a'; n <= 'z'; n++)
-		putchar("%c,", n);
+		putchar("%c", n);
 	for (n = 'A'; n <= 'Z'; n++)
-		putchar("%c,", n);
+		putchar("%c", n);
 	putchar("\n");
 	return (0);
 }

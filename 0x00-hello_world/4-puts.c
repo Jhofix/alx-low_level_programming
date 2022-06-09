@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 /**
  * main -  outputs \"Programming is like building a multilingual puzzle
  *
@@ -5,7 +7,6 @@
  *
  * Return: Always return 0
  */
-#include < stdio.h >
 
 int main(void)
 {
