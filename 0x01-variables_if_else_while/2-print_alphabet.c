@@ -1,19 +1,19 @@
-#include < stdio.h >
+#include <stdio.h>
 
 /**
- * main - print a to z
+ * main - Entry point
  *
- * Description: Uses only putchar
- *
- * Return: Always return 0
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char n;
+int c;
 
-	for (n = 'a'; n <= 'z'; n++)
-		putchar("%c", n);
-	putchar("\n");
-	return (0);
+for (c = 'a'; c <= 'z'; c++)
+{
+putchar(c);
+}
+putchar ('\n');
+return (0);
 }
