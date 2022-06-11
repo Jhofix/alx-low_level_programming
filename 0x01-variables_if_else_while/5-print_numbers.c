@@ -1,19 +1,16 @@
-#include < stdio.h >
-
+#include <stdio.h>
 /**
- * main - print 0 to 9
- *
- * Description: Uses only putchar
- *
- * Return: Always return 0
+ * main - Prints out all the numbers
+ * between 0 and 9
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char n;
+int l;
 
-	for (n == 0, n <= 9, n++)
-		putchar ("%d", n);
-	putchar ("\n");
-	return (0);
+for (l = 0; l < 10; l++)
+printf("%d", l);
+
+printf("\n");
+return (0);
 }

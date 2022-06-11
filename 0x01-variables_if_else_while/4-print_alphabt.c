@@ -1,24 +1,22 @@
-#include < stdio.h >
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-/*
- * main - prints a to z
- *
- * Description: Main uses only put char and exempts q and e.
- *
- * Return: Always return 0
+/**
+ * main - Prints the alphabet without q and e. *
+ * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char n;
+int i;
 
-	for (n = 'a', n <= 'z', n++)
-	{
-		if (n !=  q || n != e)
-		{
-			putchar ("%c", n);
-		}
-	}
-	putchar ("\n");
-	return (0);
+for (i = 97; i < 123; i++)
+{
+if (i != 101 && i != 113)
+{
+putchar(i);
+}
+}
+putchar('\n');
+return (0);
 }

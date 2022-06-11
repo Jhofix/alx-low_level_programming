@@ -1,21 +1,24 @@
-#include < stdio.h >
+#include <stdio.h>
 
 /**
- * main - print a to z
- *
- * Description: Uses only putchar
- *
- * Return: Always return 0
+ * main - prints out all the alphabet in
+ * lowercase and upper case.
+ * * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	char n;
+int l, u;
 
-	for (n = 'a'; n <= 'z'; n++)
-		putchar("%c", n);
-	for (n = 'A'; n <= 'Z'; n++)
-		putchar("%c", n);
-	putchar("\n");
-	return (0);
+/* l is being initialized to the ASCII */
+/* value of 'a'. Taking advantage of the */
+/* initialization, we could print out all */
+/* the alphabets up until 'z' */
+for (l = 'a'; l <= 'z'; l++)
+putchar(l);
+
+for (u = 'A'; u <= 'Z'; u++)
+putchar(u);
+
+putchar ('\n');
+return (0);
 }
