@@ -1,34 +1,28 @@
 #include "main.h"
 /**
- *rot13 - encodes strings using rot13.
- *@s: pointer to string.
- *
- *Return: pointer to encoded string.
+ * rot13 - convert to rot 13
+ * @str: input string
+ * Return: String conversion
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int stringCount, rotation;
-	char r1[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-		     'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-		     'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-		     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
-		     'Z'};
-	char r2[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
-		     'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
-		     'm', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
-		     'Z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
-		     'M'};
+	int count = 0, x;
+	char *letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (stringCount = 0; s[stringCount] != '\0'; stringCount++)
+	while (str[count] != '\0')
 	{
-		for (rotation = 0; rotation < 53; rotation++)
+		x = 0;
+		while (letters[x] != '\0')
 		{
-			if (r1[rotation] == s[stringCount])
+			if (str[count] == letters[x])
 			{
-				s[stringCount] = r2[rotation];
+				str[count] = rot13[x];
 				break;
 			}
+			x++;
 		}
+		count++;
 	}
-	return (s);
+	return (str);
 }
