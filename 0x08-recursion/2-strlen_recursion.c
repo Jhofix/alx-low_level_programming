@@ -3,7 +3,7 @@
 /**
  * _strlen_recursion - test function
  * @s: target string
- * 
+ *
  * Return: 0 or 1
  */
 
