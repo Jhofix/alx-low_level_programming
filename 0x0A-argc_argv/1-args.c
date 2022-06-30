@@ -14,8 +14,3 @@ int main(int argc, char *argv[] __attribute__((unused)))
 
 	return (0);
 }
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
