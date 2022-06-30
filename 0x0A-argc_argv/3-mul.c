@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * main - main function
@@ -13,12 +14,13 @@ int main(int argc, char *argv[])
 {
 	int i;
 
-	i = 0;
-	while (i < argc)
+	if (argc < 2)
 	{
-		printf("%s\n", argv[i]);
-		i++;
+		printf("%s\n", "ERROR");
+		return (1);
 	}
+	i = atoi(argv[1]) * atoi(argv[2]);
+	printf("%i\n", i);
 
 	return (0);
 }
