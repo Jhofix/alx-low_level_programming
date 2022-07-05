@@ -14,11 +14,11 @@ void print_dog(struct dog *d)
 	char *dnm = d->name, *down = d->owner;
 	float dag = d->age;
 
-	if (d == NULL)
+	if (d == 0)
 	{
 		return;
 	}
-	if (dnm == NULL)
+	if (dnm == 0)
 	{
 		dnm = "(nil)";
 		printf("Name: %s\n", dnm);
@@ -27,7 +27,7 @@ void print_dog(struct dog *d)
 	{
 		printf("Name: %s\n", dnm);
 	}
-		if ((dag) == 0)
+	if ((dag) == 0)
 	{
 		printf("Age: (nil)\n");
 	}
@@ -35,7 +35,7 @@ void print_dog(struct dog *d)
 	{
 		printf("Age: %.1f\n", dag);
 	}
-	if (down == NULL)
+	if (down == 0)
 	{
 		down = "(nil)";
 		printf("Owner: %s\n", down);
